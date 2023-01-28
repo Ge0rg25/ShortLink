@@ -1,0 +1,31 @@
+.body{
+    font-family: 'Tenor Sans', sans-serif;
+}
+.title{
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    height: 5em;
+    padding: 2em 5%;
+    background: #2c3e50;
+    color: #ffffff;
+}
+.form div {
+    margin: 5px 20px 5px 20px;
+    position: relative;
+}
+.fieldset {
+    border: 1px solid #7caee1;
+}
+.label {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    color: #818181;
+}
+.input {
+    margin-right: 10px;
+    width: 150px;
+}
