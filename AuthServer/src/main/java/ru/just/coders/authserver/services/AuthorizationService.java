@@ -23,7 +23,7 @@ public class AuthorizationService {
     public UserModel authorizeUser(String email, String password) {
         UserModel user = getUserByEmail(email);
         if(user == null) return null;
-        if(!Objects.equals(user.getPassword(), password)) return null;
+        if(!Objects.equals(user.getPasswd(), password)) return null;
         return user;
     }
 
@@ -34,11 +34,11 @@ public class AuthorizationService {
     }
 
     public String registerNewUser(String email, String password) {
-        UserModel user = userRepository.findAllByEmail(email);
+        UserModel user = userRepository.findAllByMail(email);
         if(user != null) return "http://localhost:4000/api/register?error=userexist";
         user = new UserModel();
-        user.setPassword(password);
-        user.setEmail(email);
+        user.setPasswd(password);
+        user.setMail(email);
         user.setToken(generateUserToken(email, password));
 
         userRepository.save(user);
@@ -46,12 +46,14 @@ public class AuthorizationService {
         return "http://localhost:4000/api/register?token="+user.getToken();
     }
 
+
+
     private String generateUserToken(String email, String password) {
         String sha256 = DigestUtils.sha256Hex(email+password);
         return sha256;
     }
 
     public UserModel getUserByEmail(String email) {
-        return userRepository.findAllByEmail(email);
+        return userRepository.findAllByMail(email);
     };
 }

@@ -13,14 +13,14 @@ public class LinkModel {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    long id;
 
-    @Column(name = "owner_token")
-    private String owner_token;
+    @Column(name = "ownertoken")
+    String ownertoken;
 
-    @Column(name = "short_url")
-    private String short_url;
+    @Column(name = "shorturl")
+    String shorturl;
 
-    @Column(name = "redirect_url")
-    private String redirect_url;
+    @Column(name = "redirecturl")
+    String redirecturl;
 }

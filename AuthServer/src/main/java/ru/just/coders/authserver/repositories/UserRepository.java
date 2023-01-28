@@ -7,6 +7,6 @@ import ru.just.coders.authserver.models.UserModel;
 @Repository
 public interface UserRepository extends JpaRepository<UserModel, Long> {
     public UserModel findAllByToken(String token);
-    public UserModel findAllByEmail(String email);
+    public UserModel findAllByMail(String email);
 
 }
