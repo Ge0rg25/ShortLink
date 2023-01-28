@@ -11,4 +11,5 @@ public class LinkDto {
     private String redirect_url;
 
     private String short_url;
+
 }
