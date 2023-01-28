@@ -10,6 +10,7 @@ import ru.just.coders.linkshorter.repositories.LinkRepository;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.UUID;
 
 @Service
 @Transactional
@@ -27,7 +28,7 @@ public class LinkService {
     public LinkDto addLink(LinkDto dto){
         LinkModel model = new LinkModel();
         model.setRedirect_url(dto.getRedirect_url());
-
+        model.setShort_url(UUID.randomUUID().toString());
         linkRepository.save(model);
         return convertModelToDto(model);
     }
