@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuthServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AuthServer.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LinkShorter.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LinkShorter.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ru.just.coders.LinkShorter.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ru.just.coders.LinkShorter.main.iml" />
     </modules>
   </component>
 </project>

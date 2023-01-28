@@ -26,6 +26,7 @@ public class AuthorizedController {
 
 
     @PostMapping("/create")
+    @CrossOrigin(origins = "http://localhost:3000/")
     public ResponseEntity<?> createLink(@RequestBody LinkDtoAuthorized dtoAuthorized){
         CheckDto dto = authCheck.checkToken(Map.of("token", dtoAuthorized.getOwnertoken()));
         if (!dto.exists){
@@ -35,11 +36,13 @@ public class AuthorizedController {
     }
 
     @PostMapping("/delete")
+    @CrossOrigin(origins = "http://localhost:3000/")
     public ResponseEntity<?> deleteLink(@RequestBody LinkDtoAuthorized dtoAuthorized){
         return new ResponseEntity<>(Map.of("status", linkService.removeLink(dtoAuthorized)), HttpStatus.OK);
     }
 
     @PostMapping("/getlinks")
+    @CrossOrigin(origins = "http://localhost:3000/")
     public ResponseEntity<?> getlinks(@RequestBody LinkDtoAuthorized dtoAuthorized){
         return new ResponseEntity<>(linkService.getlinks(dtoAuthorized), HttpStatus.OK);
     }
