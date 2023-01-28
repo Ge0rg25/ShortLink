@@ -15,7 +15,7 @@ public class UserModel {
     Long id;
 
     @Column(name = "mail")
-    String mail;
+    String mail; 
 
     @Column(name = "psswd")
     String password;
