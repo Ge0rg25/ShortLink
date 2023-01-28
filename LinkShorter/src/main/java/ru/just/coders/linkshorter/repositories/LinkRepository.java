@@ -7,6 +7,6 @@ import ru.just.coders.linkshorter.models.LinkModel;
 @Repository
 public interface LinkRepository extends JpaRepository<LinkModel, Long> {
 
-    public LinkModel findAllByOwner_token();
+    public LinkModel findAllByOwner_token(String owner_token);
 
 }
