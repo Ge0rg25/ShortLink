@@ -14,10 +14,37 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ApiGateWay" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ApiGateWay" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/EurekaServer" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/EurekaServer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/GateWay" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/GateWay" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/LinkShorter" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/LinkShorter" />
           </set>
         </option>
       </GradleProjectSettings>
