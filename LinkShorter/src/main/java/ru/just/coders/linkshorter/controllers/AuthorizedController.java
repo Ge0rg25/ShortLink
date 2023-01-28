@@ -38,12 +38,20 @@ public class AuthorizedController {
     @PostMapping("/delete")
     @CrossOrigin(origins = "http://localhost:3000/")
     public ResponseEntity<?> deleteLink(@RequestBody LinkDtoAuthorized dtoAuthorized){
+        CheckDto dto = authCheck.checkToken(Map.of("token", dtoAuthorized.getOwnertoken()));
+        if (!dto.exists){
+            return new ResponseEntity<>(Map.of("error", "invalid access token"), HttpStatus.BAD_REQUEST);
+        }
         return new ResponseEntity<>(Map.of("status", linkService.removeLink(dtoAuthorized)), HttpStatus.OK);
     }
 
     @PostMapping("/getlinks")
     @CrossOrigin(origins = "http://localhost:3000/")
     public ResponseEntity<?> getlinks(@RequestBody LinkDtoAuthorized dtoAuthorized){
+        CheckDto dto = authCheck.checkToken(Map.of("token", dtoAuthorized.getOwnertoken()));
+        if (!dto.exists){
+            return new ResponseEntity<>(Map.of("error", "invalid access token"), HttpStatus.BAD_REQUEST);
+        }
         return new ResponseEntity<>(linkService.getlinks(dtoAuthorized), HttpStatus.OK);
     }
 

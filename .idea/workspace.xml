@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7148b63-4979-4d3c-b3fb-66d1e8f692f1" name="Changes" comment="Finish">
-      <change beforePath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/controllers/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/controllers/AuthorizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/controllers/AuthorizedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/controllers/AuthorizedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +53,6 @@
       </list>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AuthServer/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -89,7 +85,6 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "spring.configuration.checksum": "701b184edce44528819117ebb4358129",
-    "ts.external.directory.path": "C:\\Users\\admin\\Documents\\GitHub\\ShortLink\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -128,13 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkShorterApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="ru.just.coders.LinkShorter.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.just.coders.linkshorter.LinkShorterApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LinkShorterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="LinkShorter.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.just.coders.linkshorter.LinkShorterApplication" />
@@ -155,7 +143,6 @@
     </configuration>
     <list>
       <item itemvalue="npm.dev" />
-      <item itemvalue="Spring Boot.LinkShorterApplication (1)" />
       <item itemvalue="Spring Boot.AuthServerApplication (1)" />
       <item itemvalue="Spring Boot.LinkShorterApplication" />
       <item itemvalue="Spring Boot.GateWayApplication" />
