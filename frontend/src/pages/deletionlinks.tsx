@@ -1,6 +1,6 @@
 import style from "../styles/del.module.css"
 import React from "react";
-import Footer from "@/componets/Footer";
+import Footer from "@/components/Footer";
 export default function Deletionlinks() {
     return (
         <>
