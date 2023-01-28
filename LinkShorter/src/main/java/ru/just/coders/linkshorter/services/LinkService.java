@@ -3,7 +3,7 @@ package ru.just.coders.linkshorter.services;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import ru.just.coders.linkshorter.dto.LinkDto;
+import ru.just.coders.linkshorter.dto.UserDto;
 import ru.just.coders.linkshorter.models.LinkModel;
 import ru.just.coders.linkshorter.repositories.LinkRepository;
 
@@ -22,7 +22,7 @@ public class LinkService {
         this.linkRepository = linkRepository;
     }
 
-    public LinkDto addLink(LinkDto dto){
+    public UserDto addLink(UserDto dto){
         LinkModel model = new LinkModel();
         model.setRedirect_url(dto.getRedirect_url());
         model.setShort_url(UUID.randomUUID().toString());
@@ -32,7 +32,7 @@ public class LinkService {
 
 
 
-    public LinkDto convertModelToDto(LinkModel model){
-        return modelMapper.map(model, LinkDto.class);
+    public UserDto convertModelToDto(LinkModel model){
+        return modelMapper.map(model, UserDto.class);
     }
 }

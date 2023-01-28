@@ -7,6 +7,7 @@ import ru.just.coders.authserver.models.UserModel;
 @Repository
 public interface UserRepository extends JpaRepository<UserModel, Long> {
     public UserModel findAllByToken(String token);
-    public UserModel findAllByEmail(String email);
+    public boolean existsByToken(String token);
+    public UserModel findFirstByMail(String email);
 
 }
