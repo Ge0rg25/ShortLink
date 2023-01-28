@@ -26,13 +26,13 @@ public class AuthorizationService {
     public UserModel authorizeUser(String email, String password) {
         UserModel user = getUserByEmail(email);
         if(user == null) return null;
-        if(!Objects.equals(user.getPassword(), password)) return null;
+        if(!Objects.equals(user.getPasswd(), password)) return null;
         return user;
     }
 
     public Map<String, String> getRedirectUrl(String email, String password) {
         UserModel user = authorizeUser(email, password);
-        if(user == null) return Map.of("error", "Invalid authorization data");;
+        if(user == null) return Map.of("error", "Invalid authorization data");
         return Map.of("token", user.getToken());
     }
 
@@ -40,7 +40,7 @@ public class AuthorizationService {
         UserModel user = userRepository.findFirstByMail(model.getEmail());
         if(user != null) return Map.of("error", "User alerady exists");
         user = new UserModel();
-        user.setPassword(model.getPassword());
+        user.setPasswd(model.getPassword());
         user.setMail(model.getEmail());
         user.setToken(generateUserToken(model.getEmail(), model.getPassword()));
 

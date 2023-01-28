@@ -4,35 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7148b63-4979-4d3c-b3fb-66d1e8f692f1" name="Changes" comment="Fix auth service">
-      <change afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/controllers/AuthorizedController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/controllers/RedirectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/dto/LinkDtoAnonimous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/AuthServer.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/LinkShorter.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ru.just.coders.LinkShorter.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthServer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AuthServer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/repositories/UserRepository.java" afterDir="false" />
+    <list default="true" id="f7148b63-4979-4d3c-b3fb-66d1e8f692f1" name="Changes" comment="Finish">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/LinkShorter.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/configuration/CORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/services/AuthorizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthServer/src/main/java/ru/just/coders/authserver/services/AuthorizationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthServer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkShorter/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/LinkShorterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/LinkShorterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/dto/LinkDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/models/LinkModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/models/LinkModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/repositories/LinkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/repositories/LinkRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/services/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/services/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/controllers/AuthorizedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/controllers/AuthorizedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/feign/AuthCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/feign/AuthCheck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +82,10 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "19",
     "last_opened_file_path": "C:/Users/gogus/Desktop/MyProject/ShortLink/LinkShorter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -126,13 +111,6 @@
   <component name="RunManager" selected="npm.dev">
     <configuration name="AuthServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="AuthServer.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.just.coders.authserver.AuthServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="ru.just.coders.AuthServer.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.just.coders.authserver.AuthServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,7 +151,6 @@
     <list>
       <item itemvalue="npm.dev" />
       <item itemvalue="Spring Boot.AuthServerApplication (1)" />
-      <item itemvalue="Spring Boot.AuthServerApplication" />
       <item itemvalue="Spring Boot.LinkShorterApplication" />
       <item itemvalue="Spring Boot.GateWayApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
@@ -188,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674886317278</updated>
       <workItem from="1674886318631" duration="20810000" />
-      <workItem from="1674908061186" duration="187000" />
+      <workItem from="1674908061186" duration="2721000" />
     </task>
     <task id="LOCAL-00001" summary="BlaBlaBla">
       <created>1674890979887</created>
@@ -232,16 +209,46 @@
       <option name="project" value="LOCAL" />
       <updated>1674894758791</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finish">
+      <created>1674908361973</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674908361973</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BlaBlaBla" />
     <MESSAGE value="Fix" />
     <MESSAGE value="Fix auth service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix auth service" />
+    <MESSAGE value="Finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LinkShorter/src/main/java/ru/just/coders/linkshorter/controllers/AuthorizedController.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
