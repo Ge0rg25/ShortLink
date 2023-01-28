@@ -12,14 +12,14 @@ public class UserModel {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private Long id;
+    Long id;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "mail")
+    String email;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "psswd")
+    String password;
 
-    @Column(name = "token")
-    private String token;
+    @Column(name = "tkn")
+    String token;
 }
