@@ -4,8 +4,11 @@ import jakarta.transaction.Transactional;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.just.coders.authserver.dto.UserDto;
 import ru.just.coders.authserver.models.UserModel;
 import ru.just.coders.authserver.repositories.UserRepository;
+
+import java.util.Map;
 import java.util.Objects;
 
 
@@ -23,30 +26,32 @@ public class AuthorizationService {
     public UserModel authorizeUser(String email, String password) {
         UserModel user = getUserByEmail(email);
         if(user == null) return null;
-        if(!Objects.equals(user.getPasswd(), password)) return null;
+        if(!Objects.equals(user.getPassword(), password)) return null;
         return user;
     }
 
-    public String getRedirectUrl(String email, String password) {
+    public Map<String, String> getRedirectUrl(String email, String password) {
         UserModel user = authorizeUser(email, password);
-        if(user == null) return "http://localhost:4000/api/auth?error=notfound";
-        return "http://localhost:4000/api/auth?token="+user.getToken();
+        if(user == null) return Map.of("error", "Invalid authorization data");;
+        return Map.of("token", user.getToken());
     }
 
-    public String registerNewUser(String email, String password) {
-        UserModel user = userRepository.findAllByMail(email);
-        if(user != null) return "http://localhost:4000/api/register?error=userexist";
+    public Map<String, String> registerNewUser(UserDto model) {
+        UserModel user = userRepository.findFirstByMail(model.getEmail());
+        if(user != null) return Map.of("error", "User alerady exists");
         user = new UserModel();
-        user.setPasswd(password);
-        user.setMail(email);
-        user.setToken(generateUserToken(email, password));
+        user.setPassword(model.getPassword());
+        user.setMail(model.getEmail());
+        user.setToken(generateUserToken(model.getEmail(), model.getPassword()));
 
         userRepository.save(user);
 
-        return "http://localhost:4000/api/register?token="+user.getToken();
+        return Map.of("token", user.getToken());
     }
 
-
+    public Map<String, Boolean> tokenExists(String token){
+        return Map.of("exists", userRepository.existsByToken(token));
+    }
 
     private String generateUserToken(String email, String password) {
         String sha256 = DigestUtils.sha256Hex(email+password);
@@ -54,6 +59,6 @@ public class AuthorizationService {
     }
 
     public UserModel getUserByEmail(String email) {
-        return userRepository.findAllByMail(email);
+        return userRepository.findFirstByMail(email);
     };
 }
