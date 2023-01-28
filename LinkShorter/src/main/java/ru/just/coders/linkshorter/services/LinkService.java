@@ -24,11 +24,12 @@ public class LinkService {
         this.linkRepository = linkRepository;
     }
 
-    public LinkModel addLink(LinkDto dto){
+    public LinkDto addLink(LinkDto dto){
         LinkModel model = new LinkModel();
         model.setRedirect_url(dto.getRedirect_url());
 
         linkRepository.save(model);
+        return convertModelToDto(model);
     }
 
 
