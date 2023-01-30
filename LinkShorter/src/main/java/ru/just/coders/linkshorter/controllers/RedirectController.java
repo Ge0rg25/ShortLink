@@ -19,7 +19,6 @@ public class RedirectController {
 
 
     @PostMapping("/")
-    @CrossOrigin(origins = "http://localhost:3000/")
     public ResponseEntity<?> redirect(@RequestBody LinkDtoAnonimous dto){
         LinkDtoAnonimous linkDtoAnonimous = linkService.getLongUrl(dto);
         if (linkDtoAnonimous == null){
@@ -29,7 +28,6 @@ public class RedirectController {
     }
 
     @GetMapping("/test")
-    @CrossOrigin(origins = "http://localhost:3000/")
     public String test(){
         return "test";
     }

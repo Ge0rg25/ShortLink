@@ -1,6 +1,7 @@
 import style from "../styles/reg.module.css"
 import React, {useEffect, useImperativeHandle, useRef} from "react";
 import Footer from "@/components/Footer";
+import RequestManager from "@/utils/RequestManager";
 export default function Login() {
     return (
         <>
@@ -29,45 +30,21 @@ export default function Login() {
                         <br/><button onClick={
                         ((event => {
                             event.preventDefault();
-                            fetch("http://localhost:8082/auth/authorize", {
-                                method: "POST",
-                                // @ts-ignore
-                                body: {
-                                    // @ts-ignore
-                                    email: (document.querySelector("#siteLogin")as HTMLInputElement).value,
-                                    password: (document.querySelector("#sitePass") as HTMLInputElement).value
-                                },
-                                headers: {
-                                    "Content-Type":"application/json"
-                                }
-                            })
-                                .then(async (r:Response)=>{
-                                    if(!r.ok) return;
-                                    const json: any = await r.json()
-                                    document.cookie = `token=${json.token}`
-                                })
-                        }) )
+                            const email: HTMLInputElement = event.view.document.getElementById("siteLogin") as HTMLInputElement;
+                            const pass: HTMLInputElement = event.view.document.getElementById("sitePass") as HTMLInputElement;
+                            RequestManager.loginRequest(email.value, pass.value).then(r=>{
+                                console.log(r?.data);
+                            }).catch(console.log);
+                        }))
                     } id={"login"}>Войти</button>
                         <button onClick={
                             ((event => {
-                            event.preventDefault();
-                            fetch("http://localhost:8082/auth/register", {
-                                method: "POST",
-                                // @ts-ignore
-                                body: {
-                                    // @ts-ignore
-                                    email: (document.querySelector("#siteLogin")as HTMLInputElement).value,
-                                    password: (document.querySelector("#sitePass") as HTMLInputElement).value
-                                },
-                                headers: {
-                                    "Content-Type":"application/json"
-                                }
-                            })
-                                .then(async (r:Response)=>{
-                                    if(!r.ok) return;
-                                    const json: any = await r.json()
-                                    document.cookie = `token=${json.token}`
-                                })
+                                event.preventDefault();
+                                const email: HTMLInputElement = event.view.document.getElementById("siteLogin") as HTMLInputElement;
+                                const pass: HTMLInputElement = event.view.document.getElementById("sitePass") as HTMLInputElement;
+                                RequestManager.registerRequest(email.value, pass.value).then(r=>{
+                                    console.log(r?.data);
+                                }).catch(console.log);
                         }) )
                         } id={"reg"}>Зарегистрироваться</button>
                     </div>

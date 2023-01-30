@@ -8,6 +8,7 @@ import ru.just.coders.authserver.dto.UserDto;
 import ru.just.coders.authserver.models.UserModel;
 import ru.just.coders.authserver.repositories.UserRepository;
 
+import java.util.Date;
 import java.util.Map;
 import java.util.Objects;
 

@@ -12,7 +12,6 @@ import ru.just.coders.authserver.dto.UserDto;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000/")
 public class AuthorizationController {
 
     private final AuthorizationService authorizationService;
@@ -22,8 +21,7 @@ public class AuthorizationController {
         this.authorizationService = authorizationService;
     }
 
-    @PostMapping("/authorize")
-    @CrossOrigin(origins = "http://localhost:3000/")
+    @PostMapping(value = "/authorize")
     public ResponseEntity<?> authorize(@RequestBody UserDto model) {
         Map<String, String> token = authorizationService.getRedirectUrl(model.getEmail(), model.getPassword());
 
